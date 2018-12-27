@@ -9,8 +9,8 @@ RUN apt-get update -y \
  
 VOLUME /var/www/html
 
-ENV WORDPRESS_UPSTREAM_VERSION 3.0.3
-ENV WORDPRESS_VERSION 3.0.3
+ENV WORDPRESS_UPSTREAM_VERSION 3.7.1
+ENV WORDPRESS_VERSION 3.7.1
 
 
 # upstream tarballs include ./wordpress/ so this gives us /usr/src/wordpress

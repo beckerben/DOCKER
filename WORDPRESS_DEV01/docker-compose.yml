@@ -5,7 +5,7 @@ services:
      image: mysql:5.7
      volumes:
        - ./db_data:/var/lib/mysql
-     restart: always
+     restart: "no"
      ports: 
       - "3305:3306"
      environment:
@@ -19,7 +19,7 @@ services:
     build: .
     depends_on: 
       - db
-    restart: always
+    restart: "no"
     ports:
       - "8080:80"
     volumes:
