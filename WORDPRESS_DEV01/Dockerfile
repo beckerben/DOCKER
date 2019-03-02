@@ -1,4 +1,4 @@
-FROM php:7-apache
+FROM php:7.3-apache
 RUN apt-get update -y \
   && rm /etc/apt/preferences.d/no-debian-php \
   && apt-get install -y \
@@ -9,10 +9,9 @@ RUN apt-get update -y \
  
 VOLUME /var/www/html
 
-ENV WORDPRESS_UPSTREAM_VERSION 5.0.2
-ENV WORDPRESS_VERSION 5.0.2
-ENV WORDPRESS_SHA1 4a6971d35eb92e2fc30034141b1c865e8c156add
-
+ENV WORDPRESS_UPSTREAM_VERSION 5.1
+ENV WORDPRESS_VERSION 5.1
+ENV WORDPRESS_SHA1 830eadf0afa15928d7f6856b1b85bf57b8e1f585
 
 # upstream tarballs include ./wordpress/ so this gives us /usr/src/wordpress
 RUN curl -o wordpress.tar.gz -SL https://wordpress.org/wordpress-${WORDPRESS_UPSTREAM_VERSION}.tar.gz  \
