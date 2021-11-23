@@ -13,9 +13,9 @@ RUN apt-get update && \
  
 VOLUME /var/www/html
 
-ENV WORDPRESS_UPSTREAM_VERSION 5.7
-ENV WORDPRESS_VERSION 5.7
-ENV WORDPRESS_SHA1 76d1332cfcbc5f8b17151b357999d1f758faf897
+ENV WORDPRESS_UPSTREAM_VERSION 5.8.2
+ENV WORDPRESS_VERSION 5.8.2
+ENV WORDPRESS_SHA1 c3b1b59553eafbf301c83b14c5eeae4cf1c86044
 
 # upstream tarballs include ./wordpress/ so this gives us /usr/src/wordpress
 RUN curl -o wordpress.tar.gz -SL https://wordpress.org/wordpress-${WORDPRESS_UPSTREAM_VERSION}.tar.gz  \
